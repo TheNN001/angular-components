@@ -1,0 +1,57 @@
+<table class="table-pv">
+    <thead *ngIf="dataHeader">
+        <tr>
+            <th
+            class="statText"
+            [style.width]="statWidth +'%'">
+            {{ dataHeader[0].text }}
+            </th>
+            <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
+                <th
+                *ngFor="let rowHead of dataHeader | slice:1; let i = index"
+                [style.width]="(100 / (numColumn - 1)) + '%'"
+                (mouseenter)="isOnHover = i"
+                (mouseleave)="isOnHover = 0">
+                {{ rowHead.text }}
+                </th>
+            </div>
+        </tr>
+    </thead>
+    <tbody>
+        <mat-accordion hideToggle>
+            <mat-expansion-panel 
+            *ngFor="let data of dataArray"
+            [disabled]="!data.withChild">
+                <mat-expansion-panel-header>
+                    <tr
+                    [class]="statAlign"
+                    [ngClass]="{
+                        'boldText': statBold,
+                        'upperText': statUppercase
+                    }">
+                        <td class="statText" [style.width]="statWidth +'%'">
+                            <img *ngIf="showImages"
+                            [src]="'assets/images/shared/imgWEI/pillar-' + data.id + '.svg'"/>
+                            <span>{{ data.text }}</span>
+                            <mat-icon class="arrow-icon" *ngIf="data.withChild">keyboard_arrow_down</mat-icon>
+                        </td>
+                        <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
+                            <td *ngFor="let dataRow of data.rowData" [style.width]="(100 / (numColumn - 1)) + '%'">
+                                <span class="dataScore" [ngStyle]="{
+                                    background: dataRow.color,
+                                    color: dataRow.colorText
+                                }">
+                                {{ dataRow.text }}
+                                </span>
+                            </td>
+                        </div>
+                    </tr>
+                </mat-expansion-panel-header>
+                <ngx-pv-table-index
+                [dataArray]="data.children"
+                [statWidth]="statWidth"
+                ></ngx-pv-table-index>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </tbody>
+</table>
