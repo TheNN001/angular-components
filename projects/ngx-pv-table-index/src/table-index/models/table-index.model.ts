@@ -10,7 +10,7 @@ export interface tableAccordion {
   
   export interface tableAccordionData {
     children?: Array<tableAccordionData>;
-    rowData?: Array<rowTableAccordion>;
+    rowData: Array<rowTableAccordion>;
     id: number;
     level: number;
     text: string;

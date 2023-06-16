@@ -20,35 +20,35 @@ export class AppComponent {
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración literaria",
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración imaginaria",
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración inmersiva",
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración integral",
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración novedosa",
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración reciente",
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración antigua",
         //"tooltip": null
     },
     {
-        "text": "Valoración actual",
+        "text": "Valoración nueva",
         //"tooltip": null
     }
   ]

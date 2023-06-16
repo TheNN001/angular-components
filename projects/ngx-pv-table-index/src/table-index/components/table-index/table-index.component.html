@@ -7,13 +7,14 @@
             {{ dataHeader[0].text }}
             </th>
             <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
-                <th
-                *ngFor="let rowHead of dataHeader | slice:1; let i = index"
-                [style.width]="(100 / (numColumn - 1)) + '%'"
-                (mouseenter)="isOnHover = i"
-                (mouseleave)="isOnHover = 0">
-                {{ rowHead.text }}
-                </th>
+                <div class="dataPage" *ngFor="let headItem of tableHeaderManagement; let i = index">
+                    <th *ngFor="let headText of headItem.children" 
+                    [style.width]="(100 / (columnsPerPage)) + '%'"
+                    (mouseenter)="isOnHover = i"
+                    (mouseleave)="isOnHover = 0">
+                        {{ headText.text }}
+                    </th>
+                </div>
             </div>
         </tr>
     </thead>
@@ -30,13 +31,24 @@
                         'upperText': statUppercase
                     }">
                         <td class="statText" [style.width]="statWidth +'%'">
-                            <img *ngIf="showImages"
-                            [src]="'assets/images/shared/imgWEI/pillar-' + data.id + '.svg'"/>
+                            <img *ngIf="showImages" [src]="'assets/images/shared/imgWEI/pillar-' + data.id + '.svg'"/>
                             <span>{{ data.text }}</span>
                             <mat-icon class="arrow-icon" *ngIf="data.withChild">keyboard_arrow_down</mat-icon>
                         </td>
                         <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
-                            <td *ngFor="let dataRow of data.rowData" [style.width]="(100 / (numColumn - 1)) + '%'">
+                            <div class="dataPage" *ngFor="let dataItem of tableDataManagement; let i = index">
+                                <td *ngFor="let dataCol of dataItem.children"
+                                [style.width]="(100 / (columnsPerPage)) + '%'">
+                                    <span class="dataScore" [ngStyle]="{
+                                        background: dataCol.color,
+                                        color: dataCol.colorText
+                                    }">
+                                    {{ dataCol.text }}
+                                </span>
+                                </td>
+                            </div>
+                            <!--
+                            <td *ngFor="let dataRow of data.rowData" [style.width]="(100 / numColumn) + '%'">
                                 <span class="dataScore" [ngStyle]="{
                                     background: dataRow.color,
                                     color: dataRow.colorText
@@ -44,13 +56,16 @@
                                 {{ dataRow.text }}
                                 </span>
                             </td>
+                            -->
                         </div>
                     </tr>
                 </mat-expansion-panel-header>
-                <ngx-pv-table-index
-                [dataArray]="data.children"
-                [statWidth]="statWidth"
-                ></ngx-pv-table-index>
+                <div class="childrenHolder">
+                    <ngx-pv-table-index
+                    [dataArray]="data.children"
+                    [statWidth]="statWidth"
+                    ></ngx-pv-table-index>
+                </div>
             </mat-expansion-panel>
         </mat-accordion>
     </tbody>

@@ -34,11 +34,29 @@ table.table-pv {
         display: flex;
         width: 50%;
         align-items: center;
+
+        img {
+          width: 45px;
+          height: 100%;
+          object-fit: contain;
+          margin-right: 16px;
+        }
       }
       
       .dataHolder {
         position: relative;
-        display: flex;
+        display: -webkit-box;
+        overflow: hidden;
+
+        .dataPage {
+          position: relative;
+          display: flex;
+          width: 100%;
+          right: 0%;
+          justify-content: space-between;
+          align-items: center;
+          transition: 0.5s;
+        }
       }
     }
   }
@@ -46,6 +64,13 @@ table.table-pv {
   thead .dataHolder {
     margin-right: 8px;
   }
+}
+
+.childrenHolder {
+  position: relative;
+  display: block;
+  left: -14px;
+  width: calc(100% + 38px);
 }
 
 mat-expansion-panel.mat-expansion-panel {
