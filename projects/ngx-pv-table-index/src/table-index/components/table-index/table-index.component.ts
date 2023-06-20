@@ -33,6 +33,8 @@ export class PvTableIndexComponent implements OnChanges {
   public tableDataManagement: Array<tableDataManagement> = [];
   public actualColumn: number = 0;
 
+  public actPage: number = 0;
+
   public ngOnChanges(): void {
     if (this.dataHeader) {
       this.actualColumn = 0;
@@ -62,8 +64,18 @@ export class PvTableIndexComponent implements OnChanges {
           this.tableDataManagement[i].children.push({text:'aaaa',color:'red',colorText:'green'});
         }
       }
+    }
+  }
 
-      console.info(this.tableDataManagement);
+  public changePage(pageDirection:'left'|'right') {
+    if (pageDirection == 'right') {
+      if(this.actPage < (this.totalPages - 1)) {
+        this.actPage++;
+      }
+    } else if (pageDirection == 'left') {
+      if(this.actPage > 0) {
+        this.actPage--;
+      }
     }
   }
 }
