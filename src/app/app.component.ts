@@ -116,7 +116,7 @@ export class AppComponent {
             "id": 5,
             "level": 1,
             "withChild": false,
-            "text": "Seguridad psicológica",
+            "text": "Segurasasas psicológica",
             "rowData": [
                 {
                     "text": "Muy alta",
@@ -175,16 +175,11 @@ export class AppComponent {
             "id": 8,
             "level": 1,
             "withChild": true,
-            "text": "Capacidad de aprendizaje",
+            "text": "Capaqwqwd de aprendizaje",
             "rowData": [
                 {
                     "text": "Excelente",
                     "color": "#0000ff",
-                    "colorText": "#ffffff"
-                },
-                {
-                    "text": "Muy alta",
-                    "color": "#003cff",
                     "colorText": "#ffffff"
                 },
                 {
@@ -233,7 +228,7 @@ export class AppComponent {
                 "id": 5,
                 "level": 1,
                 "withChild": false,
-                "text": "Seguridad psicológica",
+                "text": "Segurqwqetfdsfad psisdfsfsdógica",
                 "rowData": [
                     {
                         "text": "Muy alta",
@@ -247,7 +242,7 @@ export class AppComponent {
                 "id": 8,
                 "level": 1,
                 "withChild": false,
-                "text": "Capacidad de aprendizaje",
+                "text": "Capaciasdadsad de aprgjfjbvcbzaje",
                 "rowData": [
                     {
                         "text": "Excelente",
@@ -265,7 +260,7 @@ export class AppComponent {
         "id": 5,
         "level": 1,
         "withChild": false,
-        "text": "Seguridad psicológica",
+        "text": "Szxczczdad bvnvnb",
         "rowData": [
             {
                 "text": "Muy alta",
@@ -324,7 +319,7 @@ export class AppComponent {
         "id": 8,
         "level": 1,
         "withChild": false,
-        "text": "Capacidad de aprendizaje",
+        "text": "Cqeqwe123dad de apren1232131aje",
         "rowData": [
             {
                 "text": "Excelente",

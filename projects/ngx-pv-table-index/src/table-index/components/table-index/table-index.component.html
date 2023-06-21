@@ -9,7 +9,7 @@
             <div class="chngButton chngBtnLeft" [ngClass]="{'chngInvis': actPage == 0}" (click)="changePage('left')">
                 <mat-icon>chevron_left</mat-icon>
             </div>
-            <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
+            <div class="dataHolder" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage != 0">
                 <div class="dataPage" *ngFor="let headItem of tableHeaderManagement; let i = index" [style.right]="actPage * 100 + '%'">
                     <th *ngFor="let headText of headItem.children" 
                     [style.width]="(100 / (columnsPerPage)) + '%'"
@@ -44,7 +44,7 @@
                         <div class="chngButton chngInvis">
                             <mat-icon>chevron_left</mat-icon>
                         </div>
-                        <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
+                        <div class="dataHolder" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage != 0">
                             <div class="dataPage" *ngFor="let dataItem of tableDataManagement; let i = index" [style.right]="actPage * 100 + '%'">
                                 <td *ngFor="let dataCol of dataItem.children"
                                 [style.width]="(100 / (columnsPerPage)) + '%'">
@@ -66,6 +66,7 @@
                     <ngx-pv-table-index
                     [dataArray]="data.children"
                     [statWidth]="statWidth"
+                    [columnsPerPage]="columnsPerPage"
                     ></ngx-pv-table-index>
                 </div>
             </mat-expansion-panel>

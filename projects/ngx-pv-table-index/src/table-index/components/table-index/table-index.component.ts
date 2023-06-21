@@ -21,7 +21,7 @@ export class PvTableIndexComponent implements OnChanges {
 
   @Input() statWidth: number = 50;
   @Input() showImages: boolean = false;
-  @Input() columnsPerPage: number = 4;
+  @Input() columnsPerPage: number = 0;
 
   public isOnHover: number;
   public posX: number = 0;
@@ -29,42 +29,19 @@ export class PvTableIndexComponent implements OnChanges {
   public amountScrolled: number = 0;
   public numColumn: number = 0;
   public totalPages: number;
-  public tableHeaderManagement: Array<tableHeaderManagement> = [];
-  public tableDataManagement: Array<tableDataManagement> = [];
-  public actualColumn: number = 0;
-
   public actPage: number = 0;
 
+  public actualColumn: number = 0;
+  public actualColumn2: number = 0;
+
+  public tableHeaderManagement: Array<tableHeaderManagement> = new Array<tableHeaderManagement>();
+  public tableDataManagement: Array<tableDataManagement> = new Array<tableDataManagement>();
+  public tableDataManagement2: Array<tableDataManagement> = new Array<tableDataManagement>();
+
+  public dataArrayChild: Array<tableAccordionData> | undefined
+
   public ngOnChanges(): void {
-    if (this.dataHeader) {
-      this.actualColumn = 0;
-      this.numColumn = this.dataHeader?.length - 1;
-      this.totalPages = Math.ceil(this.numColumn / this.columnsPerPage);
-
-      for(let i = 0; i < this.totalPages; i++) {
-        this.tableHeaderManagement.push({idPage: i, children: []})
-        for (let j = 0; j < this.columnsPerPage; j++) {
-          this.actualColumn++;
-          if (this.actualColumn > this.numColumn) break;
-
-          this.tableHeaderManagement[i].children?.push(this.dataHeader[this.actualColumn]);
-        }
-      }
-    }
-
-    if (this.dataArray) {
-      this.actualColumn = 0;
-
-      for(let i = 0; i < this.totalPages; i++) {
-        this.tableDataManagement.push({idPage: i, children: []})
-        for (let j = 0; j < this.columnsPerPage; j++) {
-          this.actualColumn++;
-          if (this.actualColumn > this.numColumn) break;
-          
-          this.tableDataManagement[i].children.push({text:'aaaa',color:'red',colorText:'green'});
-        }
-      }
-    }
+    this.pageOrganizer();
   }
 
   public changePage(pageDirection:'left'|'right') {
@@ -75,6 +52,58 @@ export class PvTableIndexComponent implements OnChanges {
     } else if (pageDirection == 'left') {
       if(this.actPage > 0) {
         this.actPage--;
+      }
+    }
+  }
+
+  public pageOrganizer(): void {
+    if (this.columnsPerPage != 0) {
+      if (this.dataHeader) {
+        this.actualColumn = 0;
+        this.tableHeaderManagement = new Array<tableHeaderManagement>();
+
+        this.numColumn = this.dataHeader?.length - 1;
+        this.totalPages = Math.ceil(this.numColumn / this.columnsPerPage);
+  
+        for(let i = 0; i < this.totalPages; i++) {
+          this.tableHeaderManagement.push({idPage: i, children: []})
+          for (let j = 0; j < this.columnsPerPage; j++) {
+            this.actualColumn++;
+            if (this.actualColumn > this.numColumn) break;
+  
+            this.tableHeaderManagement[i].children?.push(this.dataHeader[this.actualColumn]);
+          }
+        }
+      }
+  
+      if (this.dataArray) {
+        this.actualColumn = 0;
+        this.tableDataManagement = new Array<tableDataManagement>();
+  
+        for(let i = 0; i < this.totalPages; i++) {
+          this.tableDataManagement.push({idPage: i, children: []})1
+          for (let j = 0; j < this.columnsPerPage; j++) {
+            this.actualColumn++;
+            if (this.actualColumn > this.numColumn) break;
+            
+            this.tableDataManagement[i].children.push(this.dataArray[i].rowData[j]);
+
+            if(this.dataArray[i].withChild) {
+              this.actualColumn2 = 0;
+
+              this.tableDataManagement2.push({idPage: j, children: []})
+              for (let k = 0; k < this.columnsPerPage; k++) {
+                this.actualColumn2++;
+                if (this.actualColumn2 > this.numColumn) break;
+
+                if(this.dataArray[i] != null && this.dataArray[i].children != null) {
+                  this.tableDataManagement2[i].children.push(this.dataArray[i].children[j].rowData[k]);
+                }
+              }
+            }
+          }
+          }
+        }
       }
     }
   }
