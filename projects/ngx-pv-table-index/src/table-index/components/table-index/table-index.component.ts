@@ -81,27 +81,12 @@ export class PvTableIndexComponent implements OnChanges {
         this.tableDataManagement = new Array<tableDataManagement>();
   
         for(let i = 0; i < this.totalPages; i++) {
-          this.tableDataManagement.push({idPage: i, children: []})1
+          this.tableDataManagement.push({idPage: i, children: []})
           for (let j = 0; j < this.columnsPerPage; j++) {
             this.actualColumn++;
             if (this.actualColumn > this.numColumn) break;
             
             this.tableDataManagement[i].children.push(this.dataArray[i].rowData[j]);
-
-            if(this.dataArray[i].withChild) {
-              this.actualColumn2 = 0;
-
-              this.tableDataManagement2.push({idPage: j, children: []})
-              for (let k = 0; k < this.columnsPerPage; k++) {
-                this.actualColumn2++;
-                if (this.actualColumn2 > this.numColumn) break;
-
-                if(this.dataArray[i] != null && this.dataArray[i].children != null) {
-                  this.tableDataManagement2[i].children.push(this.dataArray[i].children[j].rowData[k]);
-                }
-              }
-            }
-          }
           }
         }
       }
