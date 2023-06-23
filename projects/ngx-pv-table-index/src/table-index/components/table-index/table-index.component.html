@@ -10,14 +10,12 @@
                 <mat-icon>chevron_left</mat-icon>
             </div>
             <div class="dataHolder" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage != 0">
-                <div class="dataPage" *ngFor="let headItem of tableHeaderManagement; let i = index" [style.right]="actPage * 100 + '%'">
-                    <th *ngFor="let headText of headItem.children" 
-                    [style.width]="(100 / (columnsPerPage)) + '%'"
-                    (mouseenter)="isOnHover = i"
-                    (mouseleave)="isOnHover = 0">
-                        {{ headText.text }}
-                    </th>
-                </div>
+                <th *ngFor="let headText of dataHeader | slice:1; let i = index" [style.right]="actPage * 100 + '%'"
+                [style.width]="(100 / (columnsPerPage)) + '%'"
+                (mouseenter)="isOnHover = i"
+                (mouseleave)="isOnHover = 0">
+                    {{ headText.text }}
+                </th>
             </div>
             <div class="chngButton chngBtnRight" [ngClass]="{'chngInvis': actPage == (totalPages - 1)}" (click)="changePage('right')">
                 <mat-icon>chevron_right</mat-icon>
@@ -44,18 +42,16 @@
                         <div class="chngButton chngInvis">
                             <mat-icon>chevron_left</mat-icon>
                         </div>
-                        <div class="dataHolder" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage != 0">
-                            <div class="dataPage" *ngFor="let dataItem of tableDataManagement; let i = index" [style.right]="actPage * 100 + '%'">
-                                <td *ngFor="let dataCol of dataItem.children"
-                                [style.width]="(100 / (columnsPerPage)) + '%'">
-                                    <span class="dataScore" [ngStyle]="{
-                                        background: dataCol.color,
-                                        color: dataCol.colorText
-                                    }">
-                                    {{ dataCol.text }}
-                                </span>
-                                </td>
-                            </div>
+                        <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
+                            <td *ngFor="let dataCol of data.rowData" [style.right]="actPage * 100 + '%'"
+                            [style.width]="(100 / (columnsPerPage)) + '%'">
+                                <span class="dataScore" [ngStyle]="{
+                                    background: dataCol.color,
+                                    color: dataCol.colorText
+                                }">
+                                {{ dataCol.text }}
+                            </span>
+                            </td>
                         </div>
                         <div class="chngButton chngInvis">
                             <mat-icon>chevron_left</mat-icon>
@@ -67,6 +63,7 @@
                     [dataArray]="data.children"
                     [statWidth]="statWidth"
                     [columnsPerPage]="columnsPerPage"
+                    [actPage]="actPage"
                     ></ngx-pv-table-index>
                 </div>
             </mat-expansion-panel>

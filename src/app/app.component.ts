@@ -54,325 +54,876 @@ export class AppComponent {
   ]
 
   public examplData: Array<tableAccordionData> = [
+
     {
+
         "id": 2,
+
         "level": 1,
+
         "withChild": true,
-        "text": "Sensibilidad social",
+
+        "text": "1. Text...................",
+
         "rowData": [
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 1.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 1.2 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 1.3 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 1.4 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 1.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 1.2 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 1.3 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 1.4 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
-            },
-            {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(3) 1.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             }
+
         ],
+
         "children": [
+
           {
+
             "id": 5,
+
             "level": 1,
+
             "withChild": false,
-            "text": "Segurasasas psicológica",
+
+            "text": "1.1 Text...................",
+
             "rowData": [
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.1.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.1.2 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.1.3 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.1.4 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.1.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.1.2 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.1.3 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.1.4 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
-                },
-                {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(3) 1.1.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 }
+
             ],
+
             "children": []
+
         },
+
         {
-            "id": 8,
+
+            "id": 6,
+
             "level": 1,
+
             "withChild": true,
-            "text": "Capaqwqwd de aprendizaje",
+
+            "text": "1.2 Text...................",
+
             "rowData": [
+
                 {
-                    "text": "Excelente",
-                    "color": "#0000ff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.2.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.2.2 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.2.3 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(1) 1.2.4 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.2.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.2.2 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.2.3 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(2) 1.2.4 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 },
+
                 {
-                    "text": "Muy alta",
-                    "color": "#003cff",
-                    "colorText": "#ffffff"
+
+                    "text": "(3) 1.2.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
                 }
+
             ],
+
             "children": [
+
               {
-                "id": 5,
+
+                "id": 7,
+
                 "level": 1,
+
                 "withChild": false,
-                "text": "Segurqwqetfdsfad psisdfsfsdógica",
+
+                "text": "1.2.1 Text...................",
+
                 "rowData": [
+
                     {
-                        "text": "Muy alta",
-                        "color": "#003cff",
-                        "colorText": "#ffffff"
+
+                        "text": "(1) 1.2.1.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 1.2.1.2 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 1.2.1.3 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 1.2.1.4 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.1.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.1.2 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.1.3 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.1.4 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(3) 1.2.1.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
                     }
+
                 ],
+
                 "children": []
+
             },
+
             {
+
                 "id": 8,
+
                 "level": 1,
+
                 "withChild": false,
-                "text": "Capaciasdadsad de aprgjfjbvcbzaje",
+
+                "text": "1.2.2 Text...................",
+
                 "rowData": [
+
                     {
-                        "text": "Excelente",
-                        "color": "#0000ff",
-                        "colorText": "#ffffff"
+
+                        "text": "(1) 1.2.2.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 1.2.2.2 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 1.2.2.3 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 1.2.2.4 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.2.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.2.2 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.2.3 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 1.2.2.4 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(3) 1.2.2.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
                     }
+
                 ],
+
                 "children": []
+
             }
+
             ]
+
         }
+
         ]
+
     },
+
     {
-        "id": 5,
+
+        "id": 3,
+
         "level": 1,
+
         "withChild": false,
-        "text": "Szxczczdad bvnvnb",
+
+        "text": "2 Text...................",
+
         "rowData": [
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 2.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 2.2 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 2.3 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 2.4 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 2.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 2.2 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 2.3 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 2.4 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
-            },
-            {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(3) 2.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             }
+
         ],
+
         "children": []
+
     },
+
     {
-        "id": 8,
+
+        "id": 4,
+
         "level": 1,
-        "withChild": false,
-        "text": "Cqeqwe123dad de apren1232131aje",
+
+        "withChild": true,
+
+        "text": "3 Text...................",
+
         "rowData": [
+
             {
-                "text": "Excelente",
-                "color": "#0000ff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 3.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 3.2 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 3.3 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(1) 3.4 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 3.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 3.2 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 3.3 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(2) 3.4 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             },
+
             {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
-            },
-            {
-                "text": "Muy alta",
-                "color": "#003cff",
-                "colorText": "#ffffff"
+
+                "text": "(3) 3.1 Muy alta",
+
+                "color": "yellow",
+
+                "colorText": "#000000"
+
             }
+
         ],
-        "children": []
+
+        "children": [
+
+            {
+
+                "id": 6,
+
+                "level": 1,
+
+                "withChild": false,
+
+                "text": "3.1 Text...................",
+
+                "rowData": [
+
+                    {
+
+                        "text": "(1) 3.1.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 3.1.2 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 3.1.3 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(1) 3.1.4 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 3.1.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 3.1.2 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 3.1.3 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(2) 3.1.4 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    },
+
+                    {
+
+                        "text": "(3) 3.1.1 Muy alta",
+
+                        "color": "yellow",
+
+                        "colorText": "#000000"
+
+                    }
+
+                ],
+
+                "children": []
+
+            }
+
+        ]
+
     }
+
 ]
 }
