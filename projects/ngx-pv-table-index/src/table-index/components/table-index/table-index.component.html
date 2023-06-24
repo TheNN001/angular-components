@@ -28,13 +28,9 @@
             *ngFor="let data of dataArray"
             [disabled]="!data.withChild">
                 <mat-expansion-panel-header>
-                    <tr
-                    [class]="statAlign"
-                    [ngClass]="{
-                        'boldText': statBold,
-                        'upperText': statUppercase
-                    }">
-                        <td class="statText" [style.width]="statWidth +'%'">
+                    <tr>
+                        <td class="statText" [style.width]="statWidth +'%'"
+                        [ngClass]="{'leftAlign' : statAlign == 'left', 'centerAlign' : statAlign == 'center', 'rightAlign' : statAlign == 'right', 'boldText': statBold && !isChild}">
                             <img *ngIf="showImages" [src]="'assets/images/shared/imgWEI/pillar-' + data.id + '.svg'"/>
                             <span>{{ data.text }}</span>
                             <mat-icon class="arrow-icon" *ngIf="data.withChild">keyboard_arrow_down</mat-icon>
@@ -60,10 +56,17 @@
                 </mat-expansion-panel-header>
                 <div class="childrenHolder">
                     <ngx-pv-table-index
-                    [dataArray]="data.children"
-                    [statWidth]="statWidth"
+                    [dataArray]="data.children" 
                     [columnsPerPage]="columnsPerPage"
-                    [actPage]="actPage"
+                    [actPage]="actPage" 
+                    [statUppercase]="statUppercase"
+                    [statAlign]="statAlign"
+                    [statWidth]="statWidth"
+                    [statBold]="statBold"
+                    [dataUppercase]="statUppercase"
+                    [dataBold]="statBold"
+                    [dataAlign]="statAlign"
+                    [isChild]="true"
                     ></ngx-pv-table-index>
                 </div>
             </mat-expansion-panel>

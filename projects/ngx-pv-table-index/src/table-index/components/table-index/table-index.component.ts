@@ -21,6 +21,8 @@ export class PvTableIndexComponent {
   @Input() statWidth: number = 50;
   @Input() showImages: boolean = false;
   @Input() columnsPerPage: number = 0;
+  @Input() actPage: number = 0;
+  @Input() isChild: boolean = false;
 
   public isOnHover: number;
   public posX: number = 0;
@@ -28,7 +30,7 @@ export class PvTableIndexComponent {
   public amountScrolled: number = 0;
   public numColumn: number = 0;
   public totalPages: number;
-  @Input() actPage: number = 0;
+  
 
   public actualColumn: number = 0;
   public actualColumn2: number = 0;
