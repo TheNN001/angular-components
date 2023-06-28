@@ -12,7 +12,7 @@ export class AppComponent {
   public examplHeader: Array<tableAccordionHeader> = 
   [
     {
-        "text": "",
+        "text": "Hola, como va",
         //"tooltip": null
     },
     {
@@ -69,7 +69,7 @@ export class AppComponent {
 
             {
 
-                "text": "(1) 1.1 Muy alta",
+                "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 
                 "color": "yellow",
 
@@ -167,7 +167,7 @@ export class AppComponent {
 
             "level": 1,
 
-            "withChild": false,
+            "withChild": true,
 
             "text": "1.1 Text...................",
 
@@ -265,7 +265,211 @@ export class AppComponent {
 
             ],
 
-            "children": []
+            "children": [
+                {
+                    "id": 5,
+
+            "level": 1,
+
+            "withChild": true,
+
+            "text": "1.1 Text...................",
+
+            "rowData": [
+
+                {
+
+                    "text": "(1) 1.1.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(1) 1.1.2 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(1) 1.1.3 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(1) 1.1.4 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(2) 1.1.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(2) 1.1.2 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(2) 1.1.3 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(2) 1.1.4 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                },
+
+                {
+
+                    "text": "(3) 1.1.1 Muy alta",
+
+                    "color": "yellow",
+
+                    "colorText": "#000000"
+
+                }],
+                children: [
+                    {
+                        "id": 5,
+    
+                "level": 1,
+    
+                "withChild": false,
+    
+                "text": "1.1 Text...................",
+    
+                "rowData": [
+    
+                    {
+    
+                        "text": "(1) 1.1.1 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(1) 1.1.2 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(1) 1.1.3 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(1) 1.1.4 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(2) 1.1.1 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(2) 1.1.2 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(2) 1.1.3 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(2) 1.1.4 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    },
+    
+                    {
+    
+                        "text": "(3) 1.1.1 Muy alta",
+    
+                        "color": "yellow",
+    
+                        "colorText": "#000000"
+    
+                    }]}
+                ]
+                }
+            ]
 
         },
 

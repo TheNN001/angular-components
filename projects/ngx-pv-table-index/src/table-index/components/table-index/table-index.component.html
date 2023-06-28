@@ -1,23 +1,32 @@
-<table class="table-pv">
+<table class="table-pv" [ngClass]="{'actChild' : isChild}">
     <thead *ngIf="dataHeader">
         <tr>
-            <th
-            class="statText"
-            [style.width]="statWidth +'%'">
-            {{ dataHeader[0].text }}
+            <th class="statText" [style.width]="'calc(' + statWidth +'% - 60px)'" *ngIf="columnsPerPage != 0">
+                <span>{{ dataHeader[0].text }}</span>
             </th>
-            <div class="chngButton chngBtnLeft" [ngClass]="{'chngInvis': actPage == 0}" (click)="changePage('left')">
+            <th class="statText" [style.width]="statWidth +'%'" *ngIf="columnsPerPage == 0">
+                <span>{{ dataHeader[0].text }}</span>
+            </th>
+            <div class="dataHeader chngButton chngBtnLeft" [ngClass]="{'chngInvis': actPage == 0}" (click)="changePage('left')" *ngIf="columnsPerPage != 0">
                 <mat-icon>chevron_left</mat-icon>
             </div>
-            <div class="dataHolder" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage != 0">
-                <th *ngFor="let headText of dataHeader | slice:1; let i = index" [style.right]="actPage * 100 + '%'"
+            <div class="dataHeader dataHolder centerAlign aaaa" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage != 0">
+                <th *ngFor="let headText of dataHeader | slice:1; let i = index" [style.right]=" actPage * 100 + '%'"
                 [style.width]="(100 / (columnsPerPage)) + '%'"
                 (mouseenter)="isOnHover = i"
                 (mouseleave)="isOnHover = 0">
                     {{ headText.text }}
                 </th>
             </div>
-            <div class="chngButton chngBtnRight" [ngClass]="{'chngInvis': actPage == (totalPages - 1)}" (click)="changePage('right')">
+            <div class="dataHeader dataRegular centerAlign" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage == 0">
+                <th *ngFor="let headText of dataHeader | slice:1; let i = index"
+                [style.width]="(100 / (numColumn)) + '%'"
+                (mouseenter)="isOnHover = i"
+                (mouseleave)="isOnHover = 0">
+                    {{ headText.text }}
+                </th>
+            </div>
+            <div class="dataHeader chngButton chngBtnRight" [ngClass]="{'chngInvis': actPage == (totalPages - 1)}" (click)="changePage('right')" *ngIf="columnsPerPage != 0">
                 <mat-icon>chevron_right</mat-icon>
             </div>
         </tr>
@@ -26,31 +35,42 @@
         <mat-accordion hideToggle>
             <mat-expansion-panel 
             *ngFor="let data of dataArray"
-            [disabled]="!data.withChild">
+            [disabled]="!data.withChild" >
                 <mat-expansion-panel-header>
                     <tr>
-                        <td class="statText" [style.width]="statWidth +'%'"
-                        [ngClass]="{'leftAlign' : statAlign == 'left', 'centerAlign' : statAlign == 'center', 'rightAlign' : statAlign == 'right', 'boldText': statBold && !isChild}">
-                            <img *ngIf="showImages" [src]="'assets/images/shared/imgWEI/pillar-' + data.id + '.svg'"/>
-                            <span>{{ data.text }}</span>
+                        <td class="statText" [style.width]="'calc(' + statWidth +'% - 60px)'" *ngIf="columnsPerPage != 0"
+                        [ngClass]="{'leftAlign' : statAlign == 'left', 'centerAlign' : statAlign == 'center', 'rightAlign' : statAlign == 'right', 'boldText': !isChild && statFirstBold || statBold}">
+                            <img *ngIf="showImages && !isChild" [src]="'assets/images/shared/imgWEI/pillar-' + data.id + '.svg'"/>
+                            <span [class]="'actChild' + actualChild">{{ data.text }}</span>
                             <mat-icon class="arrow-icon" *ngIf="data.withChild">keyboard_arrow_down</mat-icon>
                         </td>
-                        <div class="chngButton chngInvis">
+                        <td class="statText" [style.width]="statWidth +'%'" *ngIf="columnsPerPage == 0"
+                        [ngClass]="{'leftAlign' : statAlign == 'left', 'centerAlign' : statAlign == 'center', 'rightAlign' : statAlign == 'right', 'boldText': !isChild && statFirstBold || statBold}">
+                            <img *ngIf="showImages && !isChild" [src]="'assets/images/shared/imgWEI/pillar-' + data.id + '.svg'"/>
+                            <span [class]="'actChild' + actualChild">{{ data.text }}</span>
+                            <mat-icon class="arrow-icon" *ngIf="data.withChild">keyboard_arrow_down</mat-icon>
+                        </td>
+                        <div class="chngButton chngInvis" *ngIf="columnsPerPage != 0">
                             <mat-icon>chevron_left</mat-icon>
                         </div>
-                        <div class="dataHolder" [style.width]="(100 - statWidth) +'%'">
-                            <td *ngFor="let dataCol of data.rowData" [style.right]="actPage * 100 + '%'"
-                            [style.width]="(100 / (columnsPerPage)) + '%'">
-                                <span class="dataScore" [ngStyle]="{
-                                    background: dataCol.color,
-                                    color: dataCol.colorText
-                                }">
-                                {{ dataCol.text }}
-                            </span>
+                        <div class="dataHolder" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage != 0">
+                            <td *ngFor="let dataCol of data.rowData" [style.right]="actPage * 100 + '%'" [style.width]="(100 / (columnsPerPage)) + '%'">
+                                <span class="dataScore" [ngStyle]="{ background: dataCol.color, color: dataCol.colorText, width: columnsPerPage > 7 ? '85px' : '136px' }"
+                                [ngClass]="{'leftAlign' : dataAlign == 'left', 'centerAlign' : dataAlign == 'center', 'rightAlign' : dataAlign == 'right'}">
+                                    {{ dataCol.text }}
+                                </span>
                             </td>
                         </div>
-                        <div class="chngButton chngInvis">
-                            <mat-icon>chevron_left</mat-icon>
+                        <div class="dataRegular" [style.width]="(100 - statWidth) +'%'" *ngIf="columnsPerPage == 0">
+                            <td *ngFor="let dataCol of data.rowData" [style.width]="(100 / (numColumn)) + '%'">
+                                <span class="dataScore" [ngStyle]="{ background: dataCol.color, color: dataCol.colorText, width: numColumn > 7 ? '85px' : '136px' }"
+                                [ngClass]="{'leftAlign' : dataAlign == 'left', 'centerAlign' : dataAlign == 'center', 'rightAlign' : dataAlign == 'right'}">
+                                    {{ dataCol.text }}
+                                </span>
+                            </td>
+                        </div>
+                        <div class="chngButton chngInvis" *ngIf="columnsPerPage != 0">
+                            <mat-icon>chevron_right</mat-icon>
                         </div>
                     </tr>
                 </mat-expansion-panel-header>
@@ -63,10 +83,12 @@
                     [statAlign]="statAlign"
                     [statWidth]="statWidth"
                     [statBold]="statBold"
-                    [dataUppercase]="statUppercase"
-                    [dataBold]="statBold"
-                    [dataAlign]="statAlign"
+                    [dataUppercase]="dataUppercase"
+                    [dataBold]="dataBold"
+                    [dataAlign]="dataAlign"
                     [isChild]="true"
+                    [actualChild]="actualChild + 1"
+                    [numColumn]="numColumn"
                     ></ngx-pv-table-index>
                 </div>
             </mat-expansion-panel>

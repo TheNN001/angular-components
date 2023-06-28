@@ -10,34 +10,38 @@ export class PvTableIndexComponent {
   @Input() dataArray: Array<tableAccordionData> | undefined;
   @Input() dataHeader: Array<tableAccordionHeader> | undefined;
 
+  @Input() statFirstBold: boolean = true;
+
   @Input() statBold: boolean = false;
   @Input() statUppercase: boolean = false;
   @Input() statAlign: 'left' | 'center' | 'right' = 'left';
 
   @Input() dataBold: boolean = false;
   @Input() dataUppercase: boolean = false;
-  @Input() dataAlign: 'left' | 'center' | 'right' = 'left';
+  @Input() dataAlign: 'left' | 'center' | 'right' = 'center';
 
-  @Input() statWidth: number = 50;
+  @Input() statWidth: number = 40;
   @Input() showImages: boolean = false;
   @Input() columnsPerPage: number = 0;
+  
   @Input() actPage: number = 0;
   @Input() isChild: boolean = false;
+  @Input() actualChild: number = 0;
+  @Input() numColumn: number = 0;
 
   public isOnHover: number;
   public posX: number = 0;
   public posY: number = 0;
   public amountScrolled: number = 0;
-  public numColumn: number = 0;
   public totalPages: number;
-  
-
-  public actualColumn: number = 0;
-  public actualColumn2: number = 0;
 
   public dataArrayChild: Array<tableAccordionData> | undefined
 
-  public changePage(pageDirection:'left'|'right') {
+  ngOnChanges() : void {
+    if (this.dataHeader) this.numColumn = this.dataHeader?.length - 1;
+  }
+
+  public changePage(pageDirection:'left'|'right') : void {
     if (this.dataHeader) this.numColumn = this.dataHeader?.length - 1;
     this.totalPages = Math.ceil(this.numColumn / this.columnsPerPage);
 

@@ -26,9 +26,12 @@ table.table-pv {
         span.dataScore {
           position: relative;
           display: block;
-          margin: auto;
           width: 136px;
           padding: 5px 10px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: auto;
         }
       }
 
@@ -40,6 +43,30 @@ table.table-pv {
 
         span {
           padding: 0 10px;
+        }
+
+        span.actChild1 {
+          padding: 0 20px 0 20px;
+        }
+
+        span.actChild2 {
+          padding: 0 30px 0 30px;
+        }
+
+        span.actChild3 {
+          padding: 0 40px 0 40px;
+        }
+
+        span.actChild4 {
+          padding: 0 50px 0 50px;
+        }
+
+        span.actChild5 {
+          padding: 0 60px 0 60px;
+        }
+
+        span.actChild6 {
+          padding: 0 70px 0 70px;
         }
 
         img {
@@ -65,12 +92,23 @@ table.table-pv {
           transition: 0.5s;
         }
       }
+
+      .dataRegular {
+        position: relative;
+        display: flex;
+        overflow: unset;
+      }
     }
   }
 
-  thead .dataHolder {
-    margin-right: 8px;
+  &.actChild {
+    left: -10px;
+    width: calc(100% + 16px);
   }
+}
+
+.dataHeader {
+  right: 8px;
 }
 
 .childrenHolder {
@@ -127,16 +165,23 @@ mat-expansion-panel.mat-expansion-panel {
   }
 }
 
+.chngBtnLeft {
+  margin-left: 8px;
+}
+
 .leftAlign {
   justify-content: flex-start;
+  text-align: left;
 }
 
 .centerAlign {
   justify-content: center;
+  text-align: center;
 }
 
 .rightAlign {
   justify-content: flex-end;
+  text-align: right;
 }
 
 .boldText {
