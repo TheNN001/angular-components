@@ -1,3 +1,5 @@
+import { tooltip } from "./tooltip.model";
+
 export interface tableAccordion {
     headers: Array<tableAccordionHeader>;
     data: Array<tableAccordionData>;
@@ -5,7 +7,7 @@ export interface tableAccordion {
   
   export interface tableAccordionHeader {
     text: string;
-    //tooltip?: tooltip;
+    tooltip?: tooltip;
   }
   
   export interface tableAccordionData {

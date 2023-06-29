@@ -13,15 +13,20 @@ export class AppComponent {
   [
     {
         "text": "Hola, como va",
-        //"tooltip": null
+        "tooltip": {
+            title: 'Hello',
+            content: ['a','b','c','d']
+        }
     },
     {
-        "text": "Valoración actual",
-        //"tooltip": null
+        "text": "Valoración actual"
     },
     {
         "text": "Valoración literaria",
-        //"tooltip": null
+        "tooltip": {
+            title: 'Hello',
+            content: ['a','b','c','d']
+        }
     },
     {
         "text": "Valoración imaginaria",
@@ -29,7 +34,10 @@ export class AppComponent {
     },
     {
         "text": "Valoración inmersiva",
-        //"tooltip": null
+        "tooltip": {
+            title: 'Hello',
+            content: ['a','b','c','d']
+        }
     },
     {
         "text": "Valoración integral",
@@ -37,7 +45,10 @@ export class AppComponent {
     },
     {
         "text": "Valoración novedosa",
-        //"tooltip": null
+        "tooltip": {
+            title: 'Hello',
+            content: ['a','b','c','d']
+        }
     },
     {
         "text": "Valoración reciente",
@@ -45,7 +56,10 @@ export class AppComponent {
     },
     {
         "text": "Valoración antigua",
-        //"tooltip": null
+        "tooltip": {
+            title: 'Hello',
+            content: ['a','b','c','d']
+        }
     },
     {
         "text": "Valoración nueva",
